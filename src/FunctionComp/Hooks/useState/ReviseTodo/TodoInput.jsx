@@ -38,9 +38,4 @@ const TodoInput = () => {
 
 export default TodoInput;
 
-/**
- * step-1 --> create input field and add button 
- * step 2 --> create state variable for input and add button--> data store by user typing
- * step 3 --> show over data on list 
 
- */
