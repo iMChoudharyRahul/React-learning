@@ -10,10 +10,9 @@ const Header = () => {
       <Link to='/' className='nav-item'>Home</Link>
       <Link to='/ref' className='nav-item'>UseRef Expl</Link>
       <Link to='/reducer' className='nav-item'>useReducer</Link>
-      <Link to='/todo' className='nav-item'>Todo-List</Link>
       <Link to='/crud' className='nav-item'>Todo-Task</Link>
     </div>
   )
 }
 
-export default Header
+export default Header;

@@ -8,8 +8,7 @@ import RightAside from './BasicLayout/manubar/RightAside';
 import Home from './components/Home/Home';
 import StatePrev from './FunctionComp/Hooks/useRef/StatePrev';
 import BasicReducer from './FunctionComp/Hooks/useReducer/Basic';
-import TakeInput from './FunctionComp/Hooks/useState/NewTodos/TakeInput';
-import TodoInput from './FunctionComp/Hooks/useState/ReviseTodo/TodoInput';
+import TodoInput from './FunctionComp/Hooks/useState/TodoList/TodoInput';
 
 function App() {
 
@@ -25,7 +24,6 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         <Route path="/ref" element={<StatePrev />}></Route>
         <Route path="/reducer" element={<BasicReducer />}></Route>
-        <Route path="/todo" element={<TakeInput />}></Route>
         <Route path="/crud" element={<TodoInput />}></Route>
        </Routes>
      </div>
