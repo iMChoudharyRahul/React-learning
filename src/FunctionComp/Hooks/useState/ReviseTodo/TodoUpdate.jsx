@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const TodoUpdate = ({ todoData, deleteListItem, setTodoData }) => {
   const [editMode, setEditMode] = useState(false);
@@ -11,6 +11,14 @@ const TodoUpdate = ({ todoData, deleteListItem, setTodoData }) => {
       )
     );
     setEditMode(false);
+  };
+
+  const handleCheckBox = (e) => {
+    setTodoData((prevTodoData) =>
+      prevTodoData.map((item) =>
+        item.id === todoData.id ? { ...item, done: e.target.checked } : item
+      )
+    );
   };
 
   let todoContent;
@@ -38,7 +46,11 @@ const TodoUpdate = ({ todoData, deleteListItem, setTodoData }) => {
 
   return (
     <div>
-      {/* <input type="checkbox"  /> */}
+      <input
+        type="checkbox"
+        checked={todoData.done}
+        onChange={(e) => handleCheckBox(e)}
+      />
       {todoContent}
       <button onClick={() => deleteListItem(todoData.id)}>Delete</button>
     </div>
@@ -47,8 +59,6 @@ const TodoUpdate = ({ todoData, deleteListItem, setTodoData }) => {
 
 export default TodoUpdate;
 
-
-
 //problem --> edit --> input field --> content edit --> refresh ho rhaa ---> refresh --> array bar bar update for every key press
 //solution--> edit title ---> alg store kr liya jeshe update --> save click save button --> array me add kr denge
-// Array Content Add --> update on id based --> array.id == content.id --> content update 
+// Array Content Add --> update on id based --> array.id == content.id --> content update

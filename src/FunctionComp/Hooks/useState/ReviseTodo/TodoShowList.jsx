@@ -18,8 +18,6 @@ const TodoShowList = ({todoData, setTodoData}) => {
             <>
             <li key={item.id}>
               <TodoUpdate  todoData={item} deleteListItem={deleteListItem} setTodoData={setTodoData}/>
-              {/* {item.title}
-              <button onClick={() => deleteListItem(item.id)}>Delete</button> */}
             </li>
             </>
           ))
