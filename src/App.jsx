@@ -9,6 +9,7 @@ import Home from './components/Home/Home';
 import StatePrev from './FunctionComp/Hooks/useRef/StatePrev';
 import BasicReducer from './FunctionComp/Hooks/useReducer/Basic';
 import TodoInput from './FunctionComp/Hooks/useState/TodoList/TodoInput';
+import Error from './components/Error/Error';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
      <div className='list-item'>
        <Routes>
         <Route path="/" element={<Home />}></Route>
+        <Route path="*" element={<Error />} />
         <Route path="/ref" element={<StatePrev />}></Route>
         <Route path="/reducer" element={<BasicReducer />}></Route>
         <Route path="/crud" element={<TodoInput />}></Route>
