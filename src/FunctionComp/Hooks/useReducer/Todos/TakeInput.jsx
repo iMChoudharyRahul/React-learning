@@ -23,6 +23,16 @@ const todoReducer = (state, action) => {
     case "DELETE_TODO": {
       return state.filter((task) => task.id !== action.id);
     }
+    case "UPDATE_TODO": {
+      return state.map((task) =>
+        task.id === action.id ? { ...task, text: action.updatedText } : task
+      );
+    }
+    case "COMPLETE_TODO": {
+      return state.map((task) =>
+        task.id === action.id ? { ...task, done: action.completed } : task
+      );
+    }
     default: {
       throw Error("Unknown action: " + action.type);
     }
@@ -33,7 +43,6 @@ const TakeInput = () => {
   const [input, setInput] = useState("");
   const [state, dispatch] = useReducer(todoReducer, initialTasks);
 
-  console.log("CHeck Input value:", input);
   const handleTodoInput = () => {
     dispatch({
       type: "ADD_TODO",
