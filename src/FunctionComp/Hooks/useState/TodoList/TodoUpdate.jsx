@@ -43,7 +43,6 @@ const TodoUpdate = ({ todoData, deleteListItem, setTodoData }) => {
       </>
     );
   }
-
   return (
     <div>
       <input

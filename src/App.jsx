@@ -11,6 +11,7 @@ import BasicReducer from "./FunctionComp/Hooks/useReducer/Basic";
 import TodoInput from "./FunctionComp/Hooks/useState/TodoList/TodoInput";
 import Error from "./components/Error/Error";
 import TakeInput from "./FunctionComp/Hooks/useReducer/Todos/TakeInput";
+import Board from "./FunctionComp/Projects/TicTacToeGame/Board";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
                 <Route path="/reducer" element={<BasicReducer />}></Route>
                 <Route path="/crud" element={<TodoInput />}></Route>
                 <Route path="/todo" element={<TakeInput />}></Route>
+                <Route path="/game" element={<Board />}></Route>
               </Routes>
             </div>
             <RightAside />

@@ -12,6 +12,7 @@ const Header = () => {
       <Link to='/reducer' className='nav-item'>useReducer</Link>
       <Link to='/crud' className='nav-item'>Todo-useState</Link>
       <Link to='/todo' className='nav-item'>Todo-useReducer</Link>
+      <Link to='/game' className='nav-item'>TicTacGame</Link>
     </div>
   )
 }
