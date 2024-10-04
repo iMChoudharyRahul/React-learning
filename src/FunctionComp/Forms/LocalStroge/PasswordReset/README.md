@@ -1,0 +1,2 @@
+## Task: When user Click on forget Pass then user get the same email on forget pass page also and after come back on login page the same email also present there
+   we use the localStroge browser api to store the email
