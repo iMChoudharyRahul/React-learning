@@ -12,6 +12,11 @@ import TodoInput from "./FunctionComp/Hooks/useState/TodoList/TodoInput";
 import Error from "./components/Error/Error";
 import TakeInput from "./FunctionComp/Hooks/useReducer/Todos/TakeInput";
 import Board from "./FunctionComp/Projects/TicTacToeGame/Board";
+import StopWatch from "./FunctionComp/Projects/StopWatch/StopWatch";
+import BlogApp from "./FunctionComp/Projects/BlogApp/Blogs";
+import BlogUsingReducer from "./FunctionComp/Hooks/useReducer/BlogApp/BlogUsingReducer";
+import IndexForm from "./FunctionComp/Forms/LocalStroge/PasswordReset/IndexForm";
+import CheckUser from "./FunctionComp/Forms/CheckOnlineUser/CheckUser";
 
 function App() {
   return (
@@ -27,9 +32,14 @@ function App() {
                 <Route path="*" element={<Error />} />
                 <Route path="/ref" element={<StatePrev />}></Route>
                 <Route path="/reducer" element={<BasicReducer />}></Route>
+                <Route path="/blog" element={<BlogUsingReducer />}></Route>
                 <Route path="/crud" element={<TodoInput />}></Route>
                 <Route path="/todo" element={<TakeInput />}></Route>
                 <Route path="/game" element={<Board />}></Route>
+                <Route path="/timer" element={<StopWatch />}></Route>
+                <Route path="/blogs" element={<BlogApp />}></Route>
+                <Route path="/resetPass" element={<IndexForm />}></Route>
+                <Route path="/network" element={<CheckUser />}></Route>
               </Routes>
             </div>
             <RightAside />
