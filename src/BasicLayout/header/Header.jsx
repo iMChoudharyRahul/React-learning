@@ -27,9 +27,9 @@ const Header = () => {
       <Link to="/game" className="nav-item">
         TicTacGame
       </Link>
-      <Link to="/timer" className="nav-item">
+      {/* <Link to="/timer" className="nav-item">
         StopWatch
-      </Link>
+      </Link> */}
       <Link to="/blogs" className="nav-item">
         BlogApp
       </Link>
@@ -38,6 +38,12 @@ const Header = () => {
       </Link>
       <Link to="/network" className="nav-item">
         CheckNetwork
+      </Link>
+      {/* <Link to="/vs-folder" className="nav-item">
+        VsCodeFolderStructure
+      </Link> */}
+      <Link to="/pagination" className="nav-item">
+        Pagination
       </Link>
     </div>
   );
