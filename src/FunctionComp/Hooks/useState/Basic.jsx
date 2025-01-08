@@ -1,10 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Basic = () => {
-
+ const [count, setCount] = useState(0)
+ const increment = () => {
+  if(count <= 0){
+    setCount(() => setCount(count + 1));
+  }
+ }
+ const decrementCount = () => {
+  if(count <= 0){
+    setCount(() => setCount(count-1));
+  }
+ }
   return (
     <div>
-      <h2>Todo Learning</h2>
+      <h3>{count}</h3>
+      <button onClick={incrementCount}>Increase</button>
+      <button onClick={decrementCount}>Decrease</button>
     </div>
   )
 }
@@ -12,7 +24,6 @@ const Basic = () => {
 export default Basic
 
 /**
- * Todo list: 
- * 1. basic structure input and button
- * 2. show list data 
+ * The above code is a basic example of useState hook.
+ * 
  */
